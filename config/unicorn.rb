@@ -2,7 +2,7 @@
 #サーバ上でのアプリケーションコードが設置されているディレクトリを変数に格納
 app_path = File.expand_path('../../',__FILE__)
 #アプリケーションサーバーの性能を決める(レスポンスを生成するworkerの数)
-worker_process 1
+worker_processes 1
 #アプリケーションの設置されているディレクトリを指定
 working_directory app_path
 #Unicornの起動に必要なファイルの設置場所
