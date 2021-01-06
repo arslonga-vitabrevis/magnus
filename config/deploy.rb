@@ -37,7 +37,7 @@ set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
 #デプロイ後のUnicornの再起動タスク
-after 'deploying:publishing', 'deploy:restart'
+after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
