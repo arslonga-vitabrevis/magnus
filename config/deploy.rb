@@ -25,7 +25,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.6.5'
 
 #どの公開鍵を使うか
-set :ssh_options, auth_methods: 'publicley', keys: '~/Downloads/magnus_key.pem'
+set :ssh_options, auth_methods: 'publickey', keys: '~/Downloads/magnus_key.pem'
 
 #プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
