@@ -15,7 +15,7 @@ set :brunch, 'master'
 set :deploy_to, "/var/www/magnus"
 
 #バージョン管理の形式
-set :scm, 'git'
+#set :scm, 'git'
 
 #バージョンが変わっても共通で参照するディレクトリ
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public_uploads')
@@ -25,7 +25,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.6.5'
 
 #どの公開鍵を使うか
-set :ssh_options, auth_methods: ['publicley'], keys: ['~/.ssh/magnus_key.pem']
+set :ssh_options, auth_methods: ['publicley'], keys: ['~/Downloads/magnus_key.pem']
 
 #プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
