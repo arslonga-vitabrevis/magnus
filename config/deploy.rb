@@ -31,7 +31,7 @@ set :rbenv_ruby, '2.6.5'
 set :ssh_options, auth_methods: ['publickey'], 
     keys: ['~/Downloads/magnus_key.pem'],
     forward_agent: true, #SSHエージェント転送機能を有効にする
-    user: fetch(:user),
+    user: 'ec2-user',
     keys: %w(~/.ssh/id_rsa.pub)
 
 #プロセス番号を記載したファイルの場所
