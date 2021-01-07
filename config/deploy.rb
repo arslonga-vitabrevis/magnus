@@ -7,7 +7,7 @@ set :application, "magnus"
 #pullするレポジトリURL
 set :repo_url, "git@github.com:arslonga-vitabrevis/magnus.git"
 
-#デプロイ先のサーバーから初めてgithubにアクセする時に、エラーが出ないようにする
+#デプロイ先のサーバーから初めてgithubにアクセスする時に、エラーが出ないようにする
 #default_run_options[:pty] = true
 
 # Default branch is :master（デフォルトブランチ）
@@ -30,7 +30,9 @@ set :rbenv_ruby, '2.6.5'
 #どの公開鍵を使うか
 set :ssh_options, auth_methods: ['publickey'], 
     keys: ['~/Downloads/magnus_key.pem'],
-    forward_agent: true #SSHエージェント転送機能を有効にする
+    forward_agent: true, #SSHエージェント転送機能を有効にする
+    user: fetch(:user),
+    keys: %w(~/.ssh/id_rsa.pub)
 
 #プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
