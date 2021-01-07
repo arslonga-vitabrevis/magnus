@@ -5,7 +5,7 @@ lock "~> 3.15.0"
 set :application, "magnus"
 
 #pullするレポジトリURL
-set :repo_url, "git@github.com:arslonga-vitabrevis/magnus.git"
+set :repo_url, "https://github.com/arslonga-vitabrevis/magnus.git"
 
 #デプロイ先のサーバーから初めてgithubにアクセスする時に、エラーが出ないようにする
 #default_run_options[:pty] = true
@@ -29,7 +29,7 @@ set :rbenv_ruby, '2.6.5'
 
 #どの公開鍵を使うか
 set :ssh_options, auth_methods: ['publickey'], 
-    keys: ['~/Downloads/magnus_key.pem'],
+    #keys: ['~/Downloads/magnus_key.pem'],
     forward_agent: true, #SSHエージェント転送機能を有効にする
     user: 'ec2-user',
     keys: %w(~/.ssh/id_rsa.pub)
