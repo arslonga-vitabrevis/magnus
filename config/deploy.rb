@@ -8,7 +8,7 @@ set :application, "magnus"
 set :repo_url, "git@github.com:arslonga-vitabrevis/magnus.git"
 
 #デプロイ先のサーバーから初めてgithubにアクセする時に、エラーが出ないようにする
-default_run_options[:pty] = true
+#default_run_options[:pty] = true
 
 # Default branch is :master（デフォルトブランチ）
 set :brunch, 'master'
